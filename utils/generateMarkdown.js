@@ -1,7 +1,12 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  if (!license.licenseSelect) {
+    return '';
+  };
+  
   const badgeReturn = (license.licenseSelect).toString();
+  
   if (badgeReturn === 'MIT') {
     return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'; 
   } else if (badgeReturn === 'APACHE') {
@@ -20,7 +25,12 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+  if (!license.licenseSelect) {
+    return '';
+  };
+
   const linkReturn = (license.licenseSelect).toString();
+  
   if (linkReturn === 'MIT') {
     return '[MIT](https://choosealicense.com/licenses/mit/)';
   } else if (linkReturn === 'APACHE') {
@@ -31,24 +41,21 @@ function renderLicenseLink(license) {
     return '[AGPL V3](https://choosealicense.com/licenses/agpl-3.0/)';
   } else if (linkReturn === 'BSD 3') {
     return '[BSD 3](https://opensource.org/licenses/BSD-3-Clause)';
-  } else {
-    return '';
   }
 };
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (!license) {
+  if (!license.licenseSelect) {
     return '';
   } else {
-    return `
-    ## License 
-
-    ### ${license.licenseSelect}
-    This application is covered under the ${license.licenseSelect} license. To learn more about this license,
-    please click the link. ${renderLicenseLink(license)}
-    `;
+  return `## License 
+    
+  ### ${license.licenseSelect}
+  This application is covered under the ${license.licenseSelect} license. To learn more about this license,
+  please click the link. ${renderLicenseLink(license)}
+  `;
   }
 };
 
@@ -56,45 +63,45 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title} ${renderLicenseBadge(data)}
   
-  ## Description
+## Description
 
-  ${data.description}
+${data.description}
 
-  ## Table of Contents
+## Table of Contents
 
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [License](#license)
-  * [Contributing](#contributing)
-  * [Tests](#tests)
-  * [Questions](#questions)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
   
-  ## Installation
+## Installation
   
-  ${data.instructions}
+${data.instructions}
 
-  ## Usage
+## Usage
 
-  ${data.usage}
+${data.usage}
 
-  ${renderLicenseSection(data)}
+${renderLicenseSection(data)}
 
-  ## Contributing
+## Contributing
 
-  ${data.contributing}
+${data.contributing}
 
-  ## Tests
+## Tests
 
-  ${data.tests}
+${data.tests}
 
-  ## Questions
+## Questions
 
-  [GitHub page](https://github.com/${data.github})
+[GitHub page](https://github.com/${data.github})
   
-  Email Address: ${data.email}
+Email Address: ${data.email}
 
-  ${data.contact}
+${data.contact}
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown

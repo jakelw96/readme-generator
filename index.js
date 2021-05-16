@@ -129,7 +129,7 @@ const questions = () => {
             default: true
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'licenseSelect',
             message: 'Which license would you like your project to have?(Required-Please choose one)',
             choices: ['MIT', 'APACHE', 'GPL V3', 'AGPL V3', 'BSD 3'],
