@@ -121,8 +121,30 @@ const questions = () => {
                     return false;
                 }
             }
+        },
+        {
+            type: 'confirm',
+            name: 'licenseConfirm',
+            message: 'Would you like to add a license?',
+            default: true
+        },
+        {
+            type: 'checkbox',
+            name: 'licenseSelect',
+            message: 'Which license would you like your project to have?(Required-Please choose one)',
+            choices: ['MIT', 'APACHE', 'GPL V3', 'AGPL V3', 'BSD 3'],
+            when: (response) => response.licenseConfirm === true,
+            validate: licenseInput => {
+                if (licenseInput) {
+                    return true;
+                } else {
+                    console.log('Please select a license!');
+                    return false;
+                }
+            }
         }
     ])
+
 };
 
 
@@ -149,3 +171,4 @@ function init() {
 };
 // Function call to initialize app
 init();
+
