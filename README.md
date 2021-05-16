@@ -1,4 +1,4 @@
-# g undefined
+# g [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
   ## Description
 
@@ -24,9 +24,9 @@
   
     ## License 
 
-    ### undefined
-    This application is covered under the undefined license. To learn more about this license,
-    please click the link. undefined
+    ### MIT
+    This application is covered under the MIT license. To learn more about this license,
+    please click the link. [MIT](https://choosealicense.com/licenses/mit/)
     
 
   ## Contributing
