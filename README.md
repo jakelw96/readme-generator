@@ -1,8 +1,8 @@
-# README Generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+# Jake's Portfolio [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  
 ## Description
 
-The README Generator is a tool used to help save time in a coding project by making it easy to make a great README with command line input.
+This application is a portfolio of my work.
 
 ## Table of Contents
 
@@ -12,34 +12,34 @@ The README Generator is a tool used to help save time in a coding project by mak
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
-
+  
 ## Installation
-
-The application can be downloaded from GitHub and ran from the command line by using 'node index' or 'node index.js'.
+  
+A git clone of the repository would suffice. You then only need to run "npm start" from the command line using GitBash.
 
 ## Usage
 
-Once the application is invoked with 'node index', a series of question will be asked. Once they are all answered, a README will be generated in the root of the directory.
+Application is pretty self explanatory. It is a SPA, made with React. You can navigate through each page to see different information corresponding to the tab you selected in the navigation at the top of the page.
 
-## License
-
-### MIT
-
-This application is covered under the MIT license. To learn more about this license,
-please click the link. [MIT](https://choosealicense.com/licenses/mit/)
+## License 
+    
+  ### MIT
+  This application is covered under the MIT license. To learn more about this license,
+  please click the link. [MIT](https://choosealicense.com/licenses/mit/)
+  
 
 ## Contributing
 
-No contributions are needed at this time
+No contributions at this time.
 
 ## Tests
 
-No tests are needed at this time.
+No tests at this time.
 
 ## Questions
 
 [GitHub page](https://github.com/jakelw96)
-
+  
 Email Address: jake.lw96@gmail.com
 
-Email is preferred.
+Email is preferred
